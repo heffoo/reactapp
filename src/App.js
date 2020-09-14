@@ -22,7 +22,7 @@ class App extends React.Component {
 
 
     if (com.success === true) { 
-      console.log(com)
+    
 
       localStorage.setItem('userId', response.headers.get('userid'));
 
