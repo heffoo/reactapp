@@ -1,38 +1,199 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(226, 226, 226);
+  font-family: sans-serif;
+  /* background: linear-gradient(to left, lightgray, gray) */
+}
+:focus::-webkit-input-placeholder {
+  color: transparent
+}
+ 
+:focus::-moz-placeholder {
+  color: transparent
+}
+ 
+:focus:-moz-placeholder {
+  color: transparent
+}
+ 
+:focus:-ms-input-placeholder {
+  color: transparent
+}
+*,::before,::after {
+  box-sizing: border-box;
+}
+hr {
+   border: 2px solid rgb(226, 226, 226); 
+}
+.nav ul {
+ 
+}
+.nav ul li {
+  
+  display: inline-block;
+  padding: 20px 20px 0 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav ul li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 10px;    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav ul li a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  background-color: rgb(93, 138, 235);
+  height: 2px;
+  transform: scale(0);
+  transition: all .3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav ul li a:hover::after {
+  transform: scale(0.5);
+} 
+
+.nav ul li::after{
+  width: 100%;
+  height:5px;
+  display: block;
+  background-color: blue;
+  transform: scale(0);
+  transition: all .3s;
+}
+
+.nav ul li:hover::after {
+  transform: scale(1);
+}
+.nav ul li .active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  background-color: rgb(93, 138, 235);
+  height: 2px;
+  transform: scale(0.5);
+  transition: all .3s;
+}
+.main_container{
+  margin: 0 auto;
+  background-color: #fff;
+  width: 540px;
+  height: 590px;
+  border-radius: 10px;
+  
+}
+#search {
+  border: 0;
+  background-color: #96a1a214;
+  border-radius: 30px;
+  height: 35px;
+  margin-left: 10px;
+  outline: 0;
+  padding-left: 20px;
+}
+.followLink {
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.userCard {
+  display: flex;
+  padding: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.userPicture {
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
+.image  {
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+  width: 55px;
+}
+.userContent {
+  margin: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+}
+.userName {
+  font-size: 16px;
+}
+.userInfo {
+  margin-top: 5px;
+  color: rgb(187, 182, 182);
+  font-size: 14px;
+}
+/* .follow {
+  
+  margin:7px 0 0 130px;
+  background-color: rgb(53, 160, 209);
+  color: white;
+  width: 80px;
+  height: 40px;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+} */
+.followButton { 
+  width: 80px;
+  height: 40px;
+  border-radius: 30px;
+  outline: 0;
+  background-color: rgb(69, 122, 201);
+  border: 0;
+  color: white;
+  margin-left: auto;
+  margin-top: 10px;
+  cursor: pointer;
+} 
+.user_container {
+  width: 100%;
+  padding: 20px; 
+  overflow-y: scroll;
+  max-height: 480px;
+}
+.unfollowButton {
+  color: rgb(53, 160, 209);
+  background-color: white;
+  width: 80px;
+  height: 40px;
+  border-radius: 30px;
+  outline: 0;
+  margin-left: auto;
+  margin-top: 10px;
+  border: 0;
+  -webkit-box-shadow: -1px 1px 6px 2px rgba(0,0,0,0.48);
+  -moz-box-shadow: -1px 1px 6px 2px rgba(0,0,0,0.48);
+  box-shadow: -1px 1px 6px 2px rgba(0,0,0,0.48);
+  /* border: 1px solid black; */
+  cursor: pointer;
+}
+  .dropbtn {
+      background-color: #fff;
+      color: gray;
+      width: 40px;
+      outline: 0;
+      border: 0;
+      margin-left: auto;
+      cursor: pointer;
+  }
+  .dropContent {
+      color: rgb(53, 160, 209);
+      background-color: white;
+      /* border: 1px solid black; */
+      width: 80px;
+      height: 40px;
+      position: absolute;
+      margin: 10px 0 0 -25px;
+      border-radius: 5px 5px 5px 5px;
+      outline: 0;
+      display: block;
+      border: 0;
+      -webkit-box-shadow: -1px 1px 6px 2px rgba(0,0,0,0.48);
+      -moz-box-shadow: -1px 1px 6px 2px rgba(0,0,0,0.48);
+      box-shadow: -1px 1px 6px 2px rgba(0,0,0,0.48);
+      cursor: pointer;
+      }
+
