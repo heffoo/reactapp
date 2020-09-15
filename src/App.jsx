@@ -161,7 +161,8 @@ class UserContainer extends Component {
                   this.setState({
                     open: value.id,
                   });
-                  // this.state.open = !this.state.open;
+                  console.log(123);
+                  // this.state.open = !this.state.open
                 }}
               >
                 {this.props.active === "myComms" ? (
