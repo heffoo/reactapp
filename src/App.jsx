@@ -161,7 +161,6 @@ class UserContainer extends Component {
                   this.setState({
                     open: value.id,
                   });
-                  console.log(123);
                   // this.state.open = !this.state.open
                 }}
               >
